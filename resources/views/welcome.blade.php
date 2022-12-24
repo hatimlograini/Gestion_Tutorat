@@ -68,6 +68,23 @@ body{
 	background: #e91e63;
 }
 
+.nav-item a {
+    position: relative;
+}
+.nav-item a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 1px solid #093CAF;
+    transition: 0.4s;
+}
+
+.nav-item a:hover:after {
+    width: 100%;
+}
+
     </style>
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
@@ -78,7 +95,7 @@ body{
 		<div class="row">
 			<div class="col-md-12">
 				<nav class="navbar navbar-md">
-					<div class="navbar-brand"><h1>Coin Tutorat</h1></div>
+					<div class="navbar-brand "><h1 class="font-weight-bold" style="font-family:sans-serif">Coin Tutorat</h1></div>
                       @if (Route::has('login'))
 					<ul class="nav">
                         <li class="nav-item">
