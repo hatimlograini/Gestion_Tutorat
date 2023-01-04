@@ -61,4 +61,12 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function inscriptions() {
+        return $this->hasMany(inscription::class);
+    }
+
+    public function Demande_attestation(){
+        return $this->hasOne(Demande_attestation::class);
+    }
 }
