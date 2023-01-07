@@ -21,6 +21,16 @@ Route::get('/', function () {
 
 Route::get('/home', [HomeController::class,'redirect']);
 
+Route::get('/view_seance',[HomeController::class,'view_seance']);
+
+Route::get('/inscrire_seance/{id}',[HomeController::class,'inscrire']);
+
+
+
+
+
+
+
 
 Route::middleware([
     'auth:sanctum',

@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('inscriptions', function (Blueprint $table) {
+       Schema::create('inscriptions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users');
             $table->foreignId('id_seance')->references('id')->on('seances');
-            $table->date("date");
             $table->timestamps();
         });
     }
