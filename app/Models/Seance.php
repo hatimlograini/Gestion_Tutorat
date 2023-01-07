@@ -10,11 +10,9 @@ class Seance extends Model
     use HasFactory;
 
     public function user() {
-<<<<<<< Updated upstream
+
         return $this->hasOne(User::class);
-=======
-        return $this->hasMany(User::class);
->>>>>>> Stashed changes
+
     }
 
     public function inscriptons() {

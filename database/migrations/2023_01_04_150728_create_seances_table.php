@@ -15,11 +15,8 @@ return new class extends Migration
     {
         Schema::create('seances', function (Blueprint $table) {
             $table->id();
-<<<<<<< Updated upstream
             $table->foreignId('tueur_id')->references('id')->on('users');
             $table->foreignId('module_id')->references('id')->on('modules');
-=======
->>>>>>> Stashed changes
             $table->date("Date");
             $table->string("Heure");
             $table->string("Salle");
