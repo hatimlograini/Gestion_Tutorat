@@ -36,7 +36,7 @@ class HomeController extends Controller
     }
 
 
-    public function inscrire(Request $request, $id)
+    public function inscrire(Request $request)
     {
 
         $inscription = new inscription;
