@@ -29,11 +29,11 @@
       </li>
 
       <li class="nav-item menu-items">
-        <a class="nav-link" href="{{ url('view_users') }}">
+        <a class="nav-link" href="{{ url('view_inscription') }}">
           <span class="menu-icon">
             <i class="mdi mdi-file-document-box"></i>
           </span>
-          <span class="menu-title">Afficher users</span>
+          <span class="menu-title">Voir mes inscriptions</span>
         </a>
       </li>
 
