@@ -1,77 +1,70 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etudiants</title>
+
 @include('user.css')
-  </head>
-  <body>
-    <div class="container-scroller">
-      <div class="row p-0 m-0 proBanner">
-        <div class="col-md-12 p-0 m-0">
-          <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
-            <div class="ps-lg-1">
+</head>
 
-            </div>
+@include('user.navbar')
 
-          </div>
-        </div>
-      </div>
-      <!-- partial:partials/_sidebar.html -->
-      @include('user.sidebar')
-      <!-- partial -->
+<div class="content-wrapper">
 
-      @include('user.navbar')
-        <!-- partial -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="{{ asset('AdminFolders/css/style.css') }}">
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table">
+					    <thead class="thead-primary">
+					      <tr>
+                            <th>Cours</th>
+                            <th>Nom tuteur</th>
+                            <th>Date</th>
+                            <th>Heure</th>
+                            <th>Salle</th>
+                            <th>Action</th>
+					      </tr>
+                          @foreach ($seances as $seance)
+					    </thead>
+					    <tbody>
+					      <tr>
+                            <td>{{$modules->find($seance->module_id)->nom}}</td>
+                            <td>{{$users->find($seance->tueur_id)->name}}</td>
+                            <td>{{$seance->Date}}</td>
+                            <td>{{$seance->Heure}}</td>
+                            <td>{{$seance->Salle}}</td>
+                            <td>
+                                <a class="btn btn-primary" href="{{ url('inscrire_seance',$seance->id) }} ">S'inscrire</a>
+                            </td>
+					      </tr>
+					    @endforeach
+					    </tbody>
+					  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<script src="{{ asset('AdminFolders/js/jquery.min.js') }}"></script>
+  <script src="{{ asset('AdminFolders/js/popper.js') }}"></script>
+  <script src="{{ asset('AdminFolders/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('AdminFolders/js/main.js') }}"></script>
 
 
+</div>
 
-        <div class="container-fluid page-body-wrapper">
-
-                <div class="main-panel">
-                    <div class="row">
-                      <div class="col-lg-6 grid-margin stretch-card">
-                        <div class="card">
-
-                          <div class="card-body">
-
-              <table class="table table-light table-hover">
-                  <thead>
-                    <tr>
-                        <th style="padding: 10px">Cours</th>
-                        <th style="padding: 10px">Nom tuteur</th>
-                        <th style="padding: 10px">Date</th>
-                        <th style="padding: 10px">Heure</th>
-                        <th style="padding: 10px">Salle</th>
-
-                        <th>Action</th>
-                    </tr>
-                    @foreach ($seances as $seance)
-                  </thead>
-                  <tbody>
-                    <tr>
-                        <td>{{$modules->find($seance->module_id)->nom}}</td>
-                        <td>{{$users->find($seance->tueur_id)->name}}</td>
-                        <td>{{$seance->Date}}</td>
-                        <td>{{$seance->Heure}}</td>
-                        <td>{{$seance->Salle}}</td>
-                        <td>
-                            <a class="btn btn-primary" href="{{ url('inscrire_seance',$seance->id) }} ">S'inscrire</a>
-                        </td>
-                    </tr>
-                    @endforeach
-                  </tbody>
-                </table>
-            </div>
-        </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-      @include('user.script')
-    <!-- End custom js for this page -->
-  </body>
+@include('user.sidebar')
+@include('user.script')
+</body>
 </html>
-
-
-
-

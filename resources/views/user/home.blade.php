@@ -1,21 +1,44 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-@include('user.css')
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etudiant</title>
 
-      <!-- partial:partials/_sidebar.html -->
-      @include('user.sidebar')
-      <!-- partial -->
+ @include('user.css')
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+  <!-- Preloader -->
+  <!-- Navbar -->
+    @include('user.navbar')
+  <!-- /.navbar -->
 
-      @include('user.navbar')
-        <!-- partial -->
+  <!-- Main Sidebar Container -->
+    <!-- Brand Logo -->
+    <!-- Sidebar -->
+    @include('user.sidebar')
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
       @include('user.body')
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-      @include('user.script')
-    <!-- End custom js for this page -->
-  </body>
+  </div>
+  <!-- /.content-wrapper -->
+
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+@include('user.script')
+</body>
 </html>
+
+
+
