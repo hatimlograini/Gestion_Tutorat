@@ -100,7 +100,7 @@ body{
 					<ul class="nav">
                         <li class="nav-item">
 							@auth
-                            <a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a>
+                            <a href="{{ url('/home') }}" class="nav-link">Dashboard</a>
                             @else
 						</li>
 						<li class="nav-item">

@@ -25,8 +25,9 @@ Route::get('/view_seance',[HomeController::class,'view_seance']);
 
 Route::get('/inscrire_seance/{id}',[HomeController::class,'inscrire']);
 
+Route::get('/view_inscription',[HomeController::class,'view_inscription']);
 
-
+Route::get('/delete_inscription/{id}',[HomeController::class,'delete_inscription']);
 
 
 
