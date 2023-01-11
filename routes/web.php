@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -29,8 +30,11 @@ Route::get('/view_inscription',[HomeController::class,'view_inscription']);
 
 Route::get('/delete_inscription/{id}',[HomeController::class,'delete_inscription']);
 
+Route::get('/viewListerEtudiant',[AdminController::class,'viewListerEtudiant']);
 
+Route::get('/validerTuteur/{id}',[AdminController::class,'validerTuteur']);
 
+Route::get('/supprimerEtudiant/{id}',[AdminController::class,'supprimerEtudiant']);
 
 
 Route::middleware([
