@@ -61,9 +61,6 @@
                   <label for="" class="col-form-label">Salle</label>
                   <input type="text" class="form-control" name="Salle" id="Salle"  placeholder="inserer la salle">
                 </div>
-
-
-
               </div>
               <div class="row">
                 <div class="col-md-12 form-group">
