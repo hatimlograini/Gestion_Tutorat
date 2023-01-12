@@ -49,16 +49,16 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="./index2.html" class="nav-link">
+              <a href="{{ url('viewListerSeance') }}" class="nav-link">
                 <i class="nav-icon far fa-circle text-info"></i>
-                <p>Listes Cours</p>
+                <p>Listes Séance</p>
               </a>
             </li>
             <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
-                    <i class="nav-icon far fa-circle text-info"></i>
-                    <p>Espaces Attestations</p>
-                </a>
+              <a href="./index2.html" class="nav-link">
+                <i class="nav-icon far fa-circle text-info"></i>
+                <p>Espaces Attestations</p>
+              </a>
               </li>
           </ul>
         </li>

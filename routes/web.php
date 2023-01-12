@@ -52,6 +52,10 @@ Route::get('/supprimerEtudiant/{id}',[AdminController::class,'supprimerEtudiant'
 
 Route::get('/viewListerTuteur',[AdminController::class,'viewListerTuteur']);
 
+Route::get('/viewListerSeance',[AdminController::class,'viewListerSeance']);
+
+Route::get('/seanceEffectue/{id}',[AdminController::class,'seanceEffectue']);
+
 
 Route::middleware([
     'auth:sanctum',
