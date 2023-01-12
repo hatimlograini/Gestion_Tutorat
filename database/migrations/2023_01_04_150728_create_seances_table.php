@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date("Date");
             $table->string("Heure");
             $table->string("Salle");
+            $table->string("status")->default(0);
             $table->timestamps();
         });
     }
