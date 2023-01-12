@@ -37,6 +37,8 @@ Route::get('/validerTuteur/{id}',[AdminController::class,'validerTuteur']);
 
 Route::get('/supprimerEtudiant/{id}',[AdminController::class,'supprimerEtudiant']);
 
+Route::get('/viewListerTuteur',[AdminController::class,'viewListerTuteur']);
+
 
 Route::middleware([
     'auth:sanctum',

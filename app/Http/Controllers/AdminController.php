@@ -13,6 +13,11 @@ class AdminController extends Controller
         return view('admin.viewListerEtudiant', compact('data'));
     }
 
+    public function viewListerTuteur(){
+        $data = DB::select("SELECT * FROM users WHERE role=1");
+        return view('admin.viewListerTuteur', compact('data'));
+    }
+
     public function validerTuteur(Request $request) {
         $id = $request->id;
         $user = User::find($id);
