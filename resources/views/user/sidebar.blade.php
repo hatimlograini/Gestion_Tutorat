@@ -31,7 +31,7 @@
               <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>
-                  Gestion
+                  Bonjour 
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
@@ -49,9 +49,9 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="./index2.html" class="nav-link">
+                  <a href="proposition" class="nav-link">
                     <i class="nav-icon far fa-circle text-info"></i>
-                    <p>Listes Cours</p>
+                    <p>Faire une Proposition</p>
                   </a>
                 </li>
 

@@ -31,6 +31,19 @@ Route::get('/view_inscription',[EtudiantController::class,'view_inscription']);
 
 Route::get('/delete_inscription/{id}',[EtudiantController::class,'delete_inscription']);
 
+Route::get('/proposition',[EtudiantController::class,'proposition']);
+
+Route::post('/add_proposition',[EtudiantController::class,'add_proposition']);
+
+
+
+
+
+
+
+
+
+
 Route::get('/viewListerEtudiant',[AdminController::class,'viewListerEtudiant']);
 
 Route::get('/validerTuteur/{id}',[AdminController::class,'validerTuteur']);
