@@ -49,9 +49,9 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="proposition" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="nav-icon far fa-circle text-info"></i>
-                    <p>Faire une Proposition</p>
+                    <p>#</p>
                   </a>
                 </li>
 
