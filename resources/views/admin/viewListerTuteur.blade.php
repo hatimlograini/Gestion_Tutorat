@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,7 @@
 
 <div class="content-wrapper">
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
@@ -41,7 +40,7 @@
 					        <td>{{ $user->prenom }}</td>
 					        <td>{{ $user->email }}</td>
 					        <td>{{ $user->filiere }}</td>
-					        <td><a href="{{ url('validerTuteur',$user->id) }}" class="btn btn-primary">Valider</a>
+					        <td>
                                 <a href="{{ url('supprimerEtudiant',$user->id) }}" class="btn btn-danger">Supprimer</a>
                             </td>
 					      </tr>
@@ -62,7 +61,7 @@
 
 </div>
 
-	@include('admin.sidebar')
-	@include('admin.script')
+    @include('admin.sidebar')
+    @include('admin.script')
 </body>
 </html>

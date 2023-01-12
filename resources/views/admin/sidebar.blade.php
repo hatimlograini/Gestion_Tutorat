@@ -43,7 +43,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="./index.html" class="nav-link">
+              <a href="{{ url('viewListerTuteur') }}" class="nav-link">
                 <i class="nav-icon far fa-circle text-info"></i>
                 <p>Listes Tuteurs</p>
               </a>
