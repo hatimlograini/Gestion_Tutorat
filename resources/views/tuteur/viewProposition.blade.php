@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tuteur</title>
+
+@include('tuteur.css')
+</head>
+
+@include('tuteur.navbar')
+
+<div class="content-wrapper">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="{{ asset('AdminFolders/css/style.css') }}">
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table">
+					    <thead class="thead-primary">
+					      <tr>
+					        <th>Etudiant</th>
+					        <th>Nom module </th>
+                            
+					      </tr>
+                        @foreach ($data as $data)
+					    </thead>
+					    <tbody>
+					      <tr>
+					        <td>{{$data->name}}</td>
+                            <td>{{$data->nom}}</td>
+					        
+					      </tr>
+					    @endforeach
+					    </tbody>
+					  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<script src="{{ asset('AdminFolders/js/jquery.min.js') }}"></script>
+  <script src="{{ asset('AdminFolders/js/popper.js') }}"></script>
+  <script src="{{ asset('AdminFolders/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('AdminFolders/js/main.js') }}"></script>
+
+
+</div>
+
+@include('tuteur.sidebar')
+@include('tuteur.script')
+</body>
+</html>
