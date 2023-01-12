@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use App\Models\inscription;
 use App\Models\Module;
+use App\Models\Proposition;
 use App\Models\Seance;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -56,4 +57,24 @@ class EtudiantController extends Controller
         $inscription->delete();
         return redirect()->back();
     }
+
+    public function proposition(){
+        $modules = Module::all();
+        return view('user.ajouterProposition',compact('modules'));
+    }
+
+    public function add_proposition(Request $request){
+
+        $data = new Proposition();
+
+        $data->user_id= Auth::id();
+
+        $data->description = $request->description;
+
+        $data->id_module = $request->module;
+
+        $data->save();
+        return redirect('/home');
+    }
+
 }

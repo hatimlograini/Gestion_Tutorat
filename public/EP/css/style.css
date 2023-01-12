@@ -69,7 +69,7 @@ a {
   border-radius: 30px !important; }
   .btn.btn-primary {
     border-radius: 30px;
-    background: #ef4339;
+    background: black;
     color: #fff;
     -webkit-box-shadow: 0 15px 30px 0 rgba(239, 67, 57, 0.2);
     box-shadow: 0 15px 30px 0 rgba(239, 67, 57, 0.2); }
