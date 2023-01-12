@@ -5,6 +5,7 @@ use App\Http\Controllers\EtudiantController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TuteurController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +36,7 @@ Route::get('/proposition',[EtudiantController::class,'proposition']);
 
 Route::post('/add_proposition',[EtudiantController::class,'add_proposition']);
 
-
+Route::get('/view_proposition',[TuteurController::class,'view_proposition']);
 
 
 
