@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EtudiantController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -22,13 +23,13 @@ Route::get('/', function () {
 
 Route::get('/home', [HomeController::class,'redirect']);
 
-Route::get('/view_seance',[HomeController::class,'view_seance']);
+Route::get('/view_seance',[EtudiantController::class,'view_seance']);
 
-Route::get('/inscrire_seance/{id}',[HomeController::class,'inscrire']);
+Route::get('/inscrire_seance/{id}',[EtudiantController::class,'inscrire']);
 
-Route::get('/view_inscription',[HomeController::class,'view_inscription']);
+Route::get('/view_inscription',[EtudiantController::class,'view_inscription']);
 
-Route::get('/delete_inscription/{id}',[HomeController::class,'delete_inscription']);
+Route::get('/delete_inscription/{id}',[EtudiantController::class,'delete_inscription']);
 
 Route::get('/viewListerEtudiant',[AdminController::class,'viewListerEtudiant']);
 
