@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Seance;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -18,11 +19,24 @@ class AdminController extends Controller
         return view('admin.viewListerTuteur', compact('data'));
     }
 
+    public function viewListerSeance(){
+        $data = DB::select("SELECT s.id, u.name, s.Date, s.Heure, s.Salle FROM seances s JOIN users u ON s.tueur_id = u.id WHERE s.status = 0");
+        return view('admin.viewListerSeance', compact('data'));
+    }
+
     public function validerTuteur(Request $request) {
         $id = $request->id;
         $user = User::find($id);
         $user->role = '1';
         $user->save();
+        return redirect()->back();
+    }
+
+    public function seanceEffectue(Request $request) {
+        $id = $request->id;
+        $seance = Seance::find($id);
+        $seance->status = '1';
+        $seance->save();
         return redirect()->back();
     }
 
