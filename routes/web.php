@@ -38,7 +38,9 @@ Route::post('/add_proposition',[EtudiantController::class,'add_proposition']);
 
 Route::get('/view_proposition',[TuteurController::class,'view_proposition']);
 
+Route::get('/add_seance',[TuteurController::class,'add_seance']);
 
+Route::post('/add_seanceADD',[TuteurController::class,'add_seanceADD']);
 
 
 

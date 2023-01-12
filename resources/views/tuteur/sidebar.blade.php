@@ -31,7 +31,7 @@
               <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>
-                  Bonjour 
+                  Bonjour
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
@@ -43,9 +43,9 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="view_inscription" class="nav-link">
+                  <a href="add_seance" class="nav-link">
                     <i class="nav-icon far fa-circle text-info"></i>
-                    <p>Voir mes inscription</p>
+                    <p>ajouter seance</p>
                   </a>
                 </li>
                 <li class="nav-item">
