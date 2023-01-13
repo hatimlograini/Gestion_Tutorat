@@ -48,6 +48,10 @@ Route::get('/add_seance',[TuteurController::class,'add_seance']);
 
 Route::post('/add_seanceADD',[TuteurController::class,'add_seanceADD']);
 
+Route::get('/tuteurviewSeance',[TuteurController::class,'tuteurviewSeance']);
+
+Route::get('/SeanceEffectue/{id}',[TuteurController::class,'SeanceEffectue']);
+
 
 
 Route::get('/viewListerEtudiant',[AdminController::class,'viewListerEtudiant']);
