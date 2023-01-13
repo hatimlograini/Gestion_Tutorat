@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Module;
 use App\Models\Seance;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
@@ -17,6 +19,16 @@ class AdminController extends Controller
     public function viewListerTuteur(){
         $data = DB::select("SELECT * FROM users WHERE role=1");
         return view('admin.viewListerTuteur', compact('data'));
+    }
+
+    public function viewListerModule(){
+        $data = Module::all();
+        return view('admin.viewListerModule', compact('data'));
+    }
+
+    public function viewAddModule(){
+        
+        return view('admin.addModule');
     }
 
     public function viewListerSeance(){
@@ -45,5 +57,19 @@ class AdminController extends Controller
         $data = User::find($id);
         $data->delete();
         return redirect()->back();
+    }
+
+    public function supprimerModule($id) {
+        $data = Module::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+
+    public function addModule(Request $request){
+        $data = new Module();
+        $data->nom = $request->nom;
+        $data->save();
+        return redirect('/viewListerModule');
     }
 }

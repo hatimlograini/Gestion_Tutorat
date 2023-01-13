@@ -50,9 +50,6 @@ Route::post('/add_seanceADD',[TuteurController::class,'add_seanceADD']);
 
 
 
-
-
-
 Route::get('/viewListerEtudiant',[AdminController::class,'viewListerEtudiant']);
 
 Route::get('/validerTuteur/{id}',[AdminController::class,'validerTuteur']);
@@ -64,6 +61,14 @@ Route::get('/viewListerTuteur',[AdminController::class,'viewListerTuteur']);
 Route::get('/viewListerSeance',[AdminController::class,'viewListerSeance']);
 
 Route::get('/seanceValide/{id}',[AdminController::class,'seanceValide']);
+
+Route::get('/viewListerModule',[AdminController::class,'viewListerModule']);
+
+Route::get('/viewAddModule',[AdminController::class,'viewAddModule']);
+
+Route::post('/addModule',[AdminController::class,'addModule']);
+
+Route::get('/supprimerModule/{id}',[AdminController::class,'supprimerModule']);
 
 
 Route::middleware([
