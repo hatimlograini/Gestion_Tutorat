@@ -49,9 +49,9 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="tuteurviewSeance" class="nav-link">
                     <i class="nav-icon far fa-circle text-info"></i>
-                    <p>#</p>
+                    <p>voire Mes Seance</p>
                   </a>
                 </li>
 
