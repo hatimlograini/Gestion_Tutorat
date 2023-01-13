@@ -20,7 +20,7 @@ class AdminController extends Controller
     }
 
     public function viewListerSeance(){
-        $data = DB::select("SELECT s.id, u.name, s.Date, s.Heure, s.Salle FROM seances s JOIN users u ON s.tueur_id = u.id WHERE s.status = 0");
+        $data = DB::select("SELECT s.id, u.name, s.Date, s.Heure, s.Salle FROM seances s JOIN users u ON s.tueur_id = u.id WHERE s.Valide = 0");
         return view('admin.viewListerSeance', compact('data'));
     }
 
@@ -32,14 +32,15 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    public function seanceEffectue(Request $request) {
+    public function seanceValide(Request $request) {
         $id = $request->id;
         $seance = Seance::find($id);
-        $seance->status = '1';
+        $seance->Valide = '1';
         $seance->save();
         return redirect()->back();
     }
 
+    
     public function supprimerEtudiant($id) {
         $data = User::find($id);
         $data->delete();

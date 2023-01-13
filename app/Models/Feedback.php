@@ -12,4 +12,8 @@ class Feedback extends Model
     public function user() {
         return $this->belongsTo(User::class);
     }
+    
+    public function seance(){
+        return $this->hasMany(Seance::class);
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Feedback;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use App\Models\inscription;
@@ -77,4 +78,23 @@ class EtudiantController extends Controller
         return redirect('/home');
     }
 
+    public function ViewSeanceFeedback(){
+        $data = DB::select("select s.id,s.Date ,s.Heure,s.Salle,s.Valide, u.name, m.nom
+        from seances as s inner join users as u on s.tueur_id = u.id
+        inner join modules as m on s.module_id = m.id where effectue = 1");
+        return view('user.viewSeancesFeedback',compact('data'));
+    }
+
+    public function giveFeedback($id){
+        
+        return view('user.addFeedback',compact('id'));
+    }
+    public function add_feedback(Request $request){
+        $data = new Feedback();
+        $data->user_id = Auth::id();
+        $data->id_seance = $request->id;
+        $data->feedback = $request->feedback;
+        $data->save();
+        return redirect('/home');
+    }
 }

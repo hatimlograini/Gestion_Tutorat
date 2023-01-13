@@ -31,7 +31,7 @@
               <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>
-                  Bonjour 
+                  Bonjour
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
@@ -54,7 +54,12 @@
                     <p>Faire une Proposition</p>
                   </a>
                 </li>
-
+                <li class="nav-item">
+                    <a href="ViewSeanceFeedback" class="nav-link">
+                      <i class="nav-icon far fa-circle text-info"></i>
+                      <p>Donner Feedback</p>
+                    </a>
+                  </li>
               </ul>
             </li>
 

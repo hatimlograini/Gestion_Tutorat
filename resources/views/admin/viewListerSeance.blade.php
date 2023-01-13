@@ -15,7 +15,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 	<link rel="stylesheet" href="{{ asset('AdminFolders/css/style.css') }}">
 
 	<section class="ftco-section">
@@ -41,7 +41,7 @@
 					        <td>{{ $data->Heure }}</td>
 					        <td>{{ $data->Salle }}</td>
 					        <td>
-                    <a href="{{ url('seanceEffectue',$data->id) }}" class="btn btn-danger">Effectué</a>
+                    <a href="{{ url('seanceValide',$data->id) }}" class="btn btn-danger">Valide</a>
                   </td>
 					      </tr>
 					    @endforeach
