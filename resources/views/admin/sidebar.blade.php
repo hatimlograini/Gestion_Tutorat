@@ -61,6 +61,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href="{{ url('viewListerFeedback') }}" class="nav-link">
+                <i class="nav-icon far fa-circle text-info"></i>
+                <p>FeedBack</p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="./index2.html" class="nav-link">
                 <i class="nav-icon far fa-circle text-info"></i>
                 <p>Espaces Attestations</p>
