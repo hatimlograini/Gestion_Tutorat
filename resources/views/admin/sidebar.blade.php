@@ -39,19 +39,25 @@
             <li class="nav-item">
               <a href="{{ url('viewListerEtudiant') }}" class="nav-link">
                 <i class="nav-icon far fa-circle text-info"></i>
-                <p>Listes Etudiants</p>
+                <p>Etudiants</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ url('viewListerTuteur') }}" class="nav-link">
                 <i class="nav-icon far fa-circle text-info"></i>
-                <p>Listes Tuteurs</p>
+                <p>Tuteurs</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ url('viewListerSeance') }}" class="nav-link">
                 <i class="nav-icon far fa-circle text-info"></i>
-                <p>Listes Séance</p>
+                <p>Séances</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url('viewListerModule') }}" class="nav-link">
+                <i class="nav-icon far fa-circle text-info"></i>
+                <p>Modules</p>
               </a>
             </li>
             <li class="nav-item">
