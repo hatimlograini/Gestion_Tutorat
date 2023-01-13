@@ -54,6 +54,12 @@
                     <p>voire Mes Seance</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                    <a href="tuteurviewHistorique" class="nav-link">
+                      <i class="nav-icon far fa-circle text-info"></i>
+                      <p>Voire l'historique</p>
+                    </a>
+                  </li>
 
               </ul>
             </li>
