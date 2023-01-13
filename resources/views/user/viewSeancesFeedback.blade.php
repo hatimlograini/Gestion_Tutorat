@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tuteur</title>
+  <title>Etudiants</title>
 
-@include('tuteur.css')
+@include('user.css')
 </head>
 
-@include('tuteur.navbar')
+@include('user.navbar')
 
 <div class="content-wrapper">
 
@@ -27,19 +27,25 @@
 						<table class="table">
 					    <thead class="thead-primary">
 					      <tr>
-					        <th>Etudiant</th>
-					        <th>Nom module</th>
-                            <th>Description</th>
-
+                            <th>Cours</th>
+                            <th>Nom tuteur</th>
+                            <th>Date</th>
+                            <th>Heure</th>
+                            <th>Salle</th>
+                            <th>Action</th>
 					      </tr>
-                        @foreach ($data as $data)
+                          @foreach ($data as $data)
 					    </thead>
 					    <tbody>
 					      <tr>
-					        <td>{{$data->name}}</td>
                             <td>{{$data->nom}}</td>
-                            <td>{{$data->description}}</td>
-
+                            <td>{{$data->name}}</td>
+                            <td>{{$data->Date}}</td>
+                            <td>{{$data->Heure}}</td>
+                            <td>{{$data->Salle}}</td>
+                            <td>
+                                <a class="btn btn-primary" href="{{ url('giveFeedback',$data->id) }} ">Donner feedback</a>
+                            </td>
 					      </tr>
 					    @endforeach
 					    </tbody>
@@ -58,7 +64,7 @@
 
 </div>
 
-@include('tuteur.sidebar')
-@include('tuteur.script')
+@include('user.sidebar')
+@include('user.script')
 </body>
 </html>

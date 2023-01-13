@@ -36,6 +36,12 @@ Route::get('/proposition',[EtudiantController::class,'proposition']);
 
 Route::post('/add_proposition',[EtudiantController::class,'add_proposition']);
 
+Route::get('/ViewSeanceFeedback',[EtudiantController::class,'ViewSeanceFeedback']);
+
+Route::get('/giveFeedback/{id}',[EtudiantController::class,'giveFeedback']);
+
+Route::post('/add_feedback/{id}',[EtudiantController::class,'add_feedback']);
+
 Route::get('/view_proposition',[TuteurController::class,'view_proposition']);
 
 Route::get('/add_seance',[TuteurController::class,'add_seance']);
@@ -57,7 +63,7 @@ Route::get('/viewListerTuteur',[AdminController::class,'viewListerTuteur']);
 
 Route::get('/viewListerSeance',[AdminController::class,'viewListerSeance']);
 
-Route::get('/seanceEffectue/{id}',[AdminController::class,'seanceEffectue']);
+Route::get('/seanceValide/{id}',[AdminController::class,'seanceValide']);
 
 
 Route::middleware([

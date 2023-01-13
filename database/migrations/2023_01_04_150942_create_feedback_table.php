@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('feedback', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users');
-            $table->date("Date");
+            $table->foreignId('id_seance')->references('id')->on('seances');
             $table->string("feedback");
             $table->timestamps();
         });
