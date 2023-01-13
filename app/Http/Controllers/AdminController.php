@@ -26,6 +26,11 @@ class AdminController extends Controller
         return view('admin.viewListerModule', compact('data'));
     }
 
+    public function viewListerFeedback(){
+        $data = DB::select("SELECT u.name, f.feedback FROM feedback f JOIN users u ON f.user_id = u.id");
+        return view('admin.viewListerFeedback', compact('data'));
+    }
+
     public function viewAddModule(){
         
         return view('admin.addModule');
@@ -43,6 +48,8 @@ class AdminController extends Controller
         $user->save();
         return redirect()->back();
     }
+
+    
 
     public function seanceValide(Request $request) {
         $id = $request->id;

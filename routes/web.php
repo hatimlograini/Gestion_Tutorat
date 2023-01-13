@@ -75,6 +75,8 @@ Route::post('/addModule',[AdminController::class,'addModule']);
 
 Route::get('/supprimerModule/{id}',[AdminController::class,'supprimerModule']);
 
+Route::get('/viewListerFeedback',[AdminController::class,'viewListerFeedback']);
+
 
 Route::middleware([
     'auth:sanctum',
