@@ -52,6 +52,7 @@ Route::get('/tuteurviewSeance',[TuteurController::class,'tuteurviewSeance']);
 
 Route::get('/SeanceEffectue/{id}',[TuteurController::class,'SeanceEffectue']);
 
+Route::get('/tuteurviewHistorique',[TuteurController::class,'tuteurviewHistorique']);
 
 
 Route::get('/viewListerEtudiant',[AdminController::class,'viewListerEtudiant']);
