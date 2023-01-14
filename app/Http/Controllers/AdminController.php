@@ -95,9 +95,7 @@ class AdminController extends Controller
     public function Generer_PDF($id){
         $user = User::find($id);
 
-
-
-        $pdf = PDF::loadView('admin.Tuteur_PDF',['user' => $user],compact('date'));
+        $pdf = PDF::loadView('admin.Tuteur_PDF',['user' => $user]);
 
         //dd($date);
         return $pdf->stream($user->name . '' . $user->prenom . 'pdf');

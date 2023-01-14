@@ -1,48 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Attestaion Tutorat</title>
-  <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document Attestation</title>
+
+  <style type='text/css'>
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        color: rgb(0, 0, 0);
+        font-family: Georgia, serif;
+        font-size: 24px;
+        text-align: center;
+    }
     .container {
-    width: 80%;
-    margin: 0 auto;
-  }
+        border: 20px solid rgb(1, 19, 48);
+        width: 750px;
+        height: 563px;
+        vertical-align: middle;
+    }
+    .logo {
+        color: rgb(181, 22, 125);
+    }
 
-  .title {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-
-  .user-info {
-    background-color: #f1f1f1;
-    padding: 20px;
-    border-radius: 5px;
-  }
-
-  .label{
-    color: #093CAF;
-    font-size: 18px;
-    font-family: 'georgia';
-  }
-
-  .p{
-    font-size: 14px;
-    font-family: georgia;
-  }
-
-  </style>
+    .marquee {
+        color: rgb(13, 16, 103);
+        font-size: 48px;
+        margin: 20px;
+    }
+    .assignment {
+        margin: 20px;
+    }
+    .person {
+        border-bottom: 2px solid black;
+        font-size: 32px;
+        font-style: italic;
+        margin: 20px auto;
+        width: 400px;
+    }
+    .reason {
+        margin: 20px;
+    }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="title">Attestaion Tutorat</h1>
-    <div class="user-info">
-        <br>
-      <label class="label">Nom :</label>
-      <p class="p">{{$user->name}}</p><br>
-      <label class="label">Prenom :</label>
-      <p class="p">{{$user->prenom}}</p><br>
+  <br><br>
+<div class="container">
+
+  <br><br><br><br>
+    <div class="logo">
+        Université Privée de Fès
     </div>
-  </div>
+
+    <div class="marquee">
+        Attestation de Tutorat
+    </div>
+
+    <div class="assignment">
+        attestation pour
+    </div>
+
+    <div class="person">
+        {{ $user->name . ' ' . $user->prenom }}
+    </div>
+
+    <div class="reason">
+        On vous remercie pour votre excellent travail<br/>
+        et bonne continuation !
+    </div>
+</div>
+
 </body>
 </html>
