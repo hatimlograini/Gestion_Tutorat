@@ -77,6 +77,11 @@ Route::get('/supprimerModule/{id}',[AdminController::class,'supprimerModule']);
 
 Route::get('/viewListerFeedback',[AdminController::class,'viewListerFeedback']);
 
+Route::get('/View_tuteur_PDF',[AdminController::class,'View_tuteur_PDF']);
+
+Route::get('/Generer_PDF/{id}',[AdminController::class,'Generer_PDF']);
+
+
 
 Route::middleware([
     'auth:sanctum',
