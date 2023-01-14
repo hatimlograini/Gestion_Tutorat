@@ -34,17 +34,17 @@
                             <th>Salle</th>
                             <th>Action</th>
 					      </tr>
-                          @foreach ($seances as $seance)
+                          @foreach ($data as $data)
 					    </thead>
 					    <tbody>
 					      <tr>
-                            <td>{{$modules->find($seance->module_id)->nom}}</td>
-                            <td>{{$users->find($seance->tueur_id)->name}}</td>
-                            <td>{{$seance->Date}}</td>
-                            <td>{{$seance->Heure}}</td>
-                            <td>{{$seance->Salle}}</td>
+                            <td>{{$data->nom}}</td>
+                            <td>{{$data->name}}</td>
+                            <td>{{$data->Date}}</td>
+                            <td>{{$data->Heure}}</td>
+                            <td>{{$data->Salle}}</td>
                             <td>
-                                <a class="btn btn-primary" href="{{ url('inscrire_seance',$seance->id) }} ">S'inscrire</a>
+                                <a class="btn btn-primary" href="{{ url('inscrire_seance',$data->id) }} ">S'inscrire</a>
                             </td>
 					      </tr>
 					    @endforeach

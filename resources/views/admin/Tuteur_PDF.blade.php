@@ -37,10 +37,11 @@
   <div class="container">
     <h1 class="title">Attestaion Tutorat</h1>
     <div class="user-info">
+        <br>
       <label class="label">Nom :</label>
       <p class="p">{{$user->name}}</p><br>
       <label class="label">Prenom :</label>
-      <p class="p">{{$user->prenom}}</p>
+      <p class="p">{{$user->prenom}}</p><br>
     </div>
   </div>
 </body>
