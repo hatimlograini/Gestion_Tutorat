@@ -26,7 +26,7 @@
       <div class="row align-items-stretch no-gutters contact-wrap">
         <div class="col-md-12">
           <div class="form h-100">
-            <h3>Proposer une Seance</h3>
+            <h3>Donner votre feedback dans les seances effectue</h3>
 
 
             <form class="mb-5" method="POST" action="{{ url('add_feedback',$id) }}" >

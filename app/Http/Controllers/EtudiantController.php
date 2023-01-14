@@ -16,10 +16,13 @@ class EtudiantController extends Controller
 {
     public function view_seance()
     {
-        $users = User::all();
-        $seances = Seance::all();
-        $modules = Module::all();
-        return view('user.viewSeance', compact('seances', 'users', 'modules'));
+        $data = DB::select("select s.id,s.Date ,s.Heure,s.Salle,s.Valide, u.name, m.nom
+        from seances as s inner join users as u on s.tueur_id = u.id inner join modules as m on
+         s.module_id = m.id where Valide = 1; ");
+        //$users = User::all();
+        //$seances = Seance::all();
+        //$modules = Module::all();
+        return view('user.viewSeance', compact('data'));
     }
 
 
@@ -86,7 +89,7 @@ class EtudiantController extends Controller
     }
 
     public function giveFeedback($id){
-        
+
         return view('user.addFeedback',compact('id'));
     }
     public function add_feedback(Request $request){

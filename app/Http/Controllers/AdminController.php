@@ -12,12 +12,7 @@ use Illuminate\Support\Facades\DB;
 //use Barryvdh\DomPDF\PDF;
 
 use Barryvdh\DomPDF\Facade\Pdf;
-
-
-
-
-
-
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -100,9 +95,11 @@ class AdminController extends Controller
     public function Generer_PDF($id){
         $user = User::find($id);
 
-        $pdf = PDF::loadView('admin.Tuteur_PDF',['user' => $user]);
 
-        //dd($user);
+
+        $pdf = PDF::loadView('admin.Tuteur_PDF',['user' => $user],compact('date'));
+
+        //dd($date);
         return $pdf->stream($user->name . '' . $user->prenom . 'pdf');
         /*return response()->download(
             fn () => print($pdf),
