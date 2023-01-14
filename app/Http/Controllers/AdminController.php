@@ -5,9 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Module;
 use App\Models\Seance;
 use App\Models\User;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+//use Barryvdh\DomPDF\PDF;
+
+use Barryvdh\DomPDF\Facade\Pdf;
+
+
+
+
+
+
 
 class AdminController extends Controller
 {
@@ -32,7 +42,7 @@ class AdminController extends Controller
     }
 
     public function viewAddModule(){
-        
+
         return view('admin.addModule');
     }
 
@@ -49,7 +59,7 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    
+
 
     public function seanceValide(Request $request) {
         $id = $request->id;
@@ -59,7 +69,7 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    
+
     public function supprimerEtudiant($id) {
         $data = User::find($id);
         $data->delete();
@@ -78,5 +88,25 @@ class AdminController extends Controller
         $data->nom = $request->nom;
         $data->save();
         return redirect('/viewListerModule');
+    }
+
+    public function View_tuteur_PDF(){
+        $data = DB::select("SELECT * FROM users WHERE role=1");
+
+        return view('admin.viewTutueur_PDF',compact('data'));
+
+    }
+
+    public function Generer_PDF($id){
+        $user = User::find($id);
+
+        $pdf = PDF::loadView('admin.Tuteur_PDF',['user' => $user]);
+
+        //dd($user);
+        return $pdf->stream($user->name . '' . $user->prenom . 'pdf');
+        /*return response()->download(
+            fn () => print($pdf),
+            "filename.pdf"
+       );*/
     }
 }

@@ -6,7 +6,7 @@
         <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-       
+
       </div>
     </div>
 
@@ -67,15 +67,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="./index2.html" class="nav-link">
+              <a href="View_tuteur_PDF" class="nav-link">
                 <i class="nav-icon far fa-circle text-info"></i>
                 <p>Espaces Attestations</p>
               </a>
               </li>
           </ul>
         </li>
-        
-        
+
+
         <li class="nav-item">
           <a href="pages/calendar.html" class="nav-link">
             <i class="nav-icon far fa-calendar-alt"></i>
@@ -85,7 +85,7 @@
             </p>
           </a>
         </li>
-        
+
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
