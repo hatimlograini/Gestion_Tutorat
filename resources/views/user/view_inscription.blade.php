@@ -28,7 +28,7 @@
 					    <thead class="thead-primary">
 					      <tr>
 					        <th>Nom</th>
-					        <th>Prénom</th>
+					        <th>Module</th>
                             <th>Action</th>
 					      </tr>
                         @foreach ($data as $inscription)
