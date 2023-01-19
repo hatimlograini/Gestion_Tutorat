@@ -39,25 +39,25 @@
                 <li class="nav-item">
                   <a href="{{ url('view_proposition') }}" class="nav-link">
                     <i class="nav-icon far fa-circle text-info"></i>
-                    <p>voir proposition</p>
+                    <p>Voir proposition</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="add_seance" class="nav-link">
                     <i class="nav-icon far fa-circle text-info"></i>
-                    <p>ajouter seance</p>
+                    <p>Ajouter seance</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="tuteurviewSeance" class="nav-link">
                     <i class="nav-icon far fa-circle text-info"></i>
-                    <p>voire Mes Seance</p>
+                    <p>Voir Mes Seance</p>
                   </a>
                 </li>
                 <li class="nav-item">
                     <a href="tuteurviewHistorique" class="nav-link">
                       <i class="nav-icon far fa-circle text-info"></i>
-                      <p>Voire l'historique</p>
+                      <p>Voir l'historique</p>
                     </a>
                   </li>
 
@@ -66,7 +66,7 @@
 
 
             <li class="nav-item">
-              <a href="pages/calendar.html" class="nav-link">
+              <a href="" class="nav-link">
                 <i class="nav-icon far fa-calendar-alt"></i>
                 <p>
                   Calendar

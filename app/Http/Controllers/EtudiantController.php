@@ -42,15 +42,24 @@ class EtudiantController extends Controller
 
     public function view_inscription()
     {
+        $id = Auth::id();
         /*$data = inscription::join('seances', 'seances.id', '=', 'inscriptions.id_seance')
             ->join('users', 'users.id', '=', 'seances.tueur_id')
             ->join('modules', 'modules.id', '=', 'seances.module_id')
             ->get(['users.name', 'modules.nom']);*/
 
-        $data = DB::select("select i.id, u.name, m.nom from inscriptions as i
+            $data = DB::table('inscriptions')
+            ->join('seances', 'inscriptions.id_seance', 'seances.id')
+            ->join('users', 'seances.tueur_id', 'users.id')
+            ->join('modules', 'seances.module_id', 'modules.id')
+            ->where('inscriptions.user_id',$id)
+            ->select('inscriptions.id','users.name','modules.nom','seances.Heure')
+            ->get();
+
+       /* $data = DB::select("select i.id, u.name, m.nom from inscriptions as i
             inner join seances as s on i.id_seance = s.id
             inner join users as u on s.tueur_id = u.id
-            inner join modules as m on s.module_id = m.id");
+            inner join modules as m on s.module_id = m.id");*/
 
         return view('user.view_inscription', compact('data'));
     }

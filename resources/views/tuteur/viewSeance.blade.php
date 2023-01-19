@@ -43,7 +43,7 @@
 					        <td>{{$data->Date}}</td>
                             <td>{{$data->Heure}}</td>
 					        <td>
-                                <a class="btn btn-primary" href="{{ url('SeanceEffectue',$data->id) }}">Effectuee</a>
+                                <a class="btn btn-primary" href="{{ url('SeanceEffectue',$data->id) }}">Effectuer ?</a>
                             </td>
 					      </tr>
 					    @endforeach

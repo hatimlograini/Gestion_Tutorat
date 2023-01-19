@@ -15,7 +15,7 @@ class TuteurController extends Controller
         //$id = Auth::user()->id();
         $data = DB::select("SELECT * FROM modules JOIN propositions ON modules.id = propositions.id_module JOIN users ON propositions.user_id = users.id");
         return view('tuteur.viewProposition',compact('data'));
-
+        
     }
 
     public function add_seance(){
@@ -69,10 +69,21 @@ class TuteurController extends Controller
 
         public function tuteurviewHistorique(){
             $id =  Auth::id();
-            $data = DB::select("select h.id, u.name, s.Date ,s.Heure,m.nom from historiques as h
+           /*$data = DB::select("select h.id, u.name, s.Date ,s.Heure,m.nom from historiques as h
             inner join seances as s on h.seance_id = s.id
             inner join users as u on h.tueur_id = u.id
-            inner join modules as m on s.module_id = m.id");
+            inner join modules as m on s.module_id = m.id");*/
+
+
+
+          $data = DB::table('historiques')
+            ->join('seances', 'historiques.seance_id', 'seances.id')
+            ->join('users', 'historiques.tueur_id', 'users.id')
+            ->join('modules', 'seances.module_id', 'modules.id')
+            ->where('historiques.tueur_id',$id)
+            ->select('historiques.id','users.name','seances.Date','seances.Heure','modules.nom','seances.Heure')
+            ->get();
+
 
             return view('tuteur.viewHistorique',compact('data'));
         }

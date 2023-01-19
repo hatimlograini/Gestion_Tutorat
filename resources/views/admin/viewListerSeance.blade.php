@@ -41,7 +41,7 @@
 					        <td>{{ $data->Heure }}</td>
 					        <td>{{ $data->Salle }}</td>
 					        <td>
-                    <a href="{{ url('seanceValide',$data->id) }}" class="btn btn-danger">Validé</a>
+                    <a href="{{ url('seanceValide',$data->id) }}" class="btn btn-danger">Valider</a>
                   </td>
 					      </tr>
 					    @endforeach
